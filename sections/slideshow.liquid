@@ -147,7 +147,7 @@
                         {% if block.settings.use_h1 %}
                           <h1 class="overlay-text__title">{{ block.settings.title | newline_to_br }}</h1>
                         {% else %}
-                          <h2 class="overlay-text__title h1-style">Test{{ block.settings.title | newline_to_br }}</h2>
+                          <h2 class="overlay-text__title h1-style">{{ block.settings.title | newline_to_br }}</h2>
                         {% endif %}
                       </div>
                     {%- endif -%}
