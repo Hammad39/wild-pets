@@ -58,7 +58,7 @@
         {% if section.settings.menu != blank %}
           <span class="inline-menu">
             {% for link in linklists[section.settings.menu].links %}
-              <a class="inline-menu__link announcement-bar__link" href="{{ link.url }}">TEST {{ link.title }}</a>
+              <a class="inline-menu__link announcement-bar__link" href="{{ link.url }}">{{ link.title }}</a>
             {% endfor %}
           </span>
         {% endif %}
