@@ -37,13 +37,11 @@
       theme.money_format_with_product_code_preference = {% if settings.product_currency_code_enabled %}
         {{ shop.money_with_currency_format | json }}
       {% else %}
-        {{ shop.money_format | json }}
-      {% endif %};
+        {{ shop.money_format | json }}{% endif %};
       theme.money_format_with_cart_code_preference = {% if settings.cart_currency_code_enabled %}
         {{ shop.money_with_currency_format | json }}
       {% else %}
-        {{ shop.money_format | json }}
-      {% endif %};
+        {{ shop.money_format | json }}{% endif %};
       theme.money_format = {{ shop.money_format | json }};
       theme.strings = {
         previous: {{ 'general.accessibility_labels.previous' | t | json }},
@@ -102,9 +100,9 @@
       </head>
 
       <body class="template-{{ template | split: '.' | first | handle }}
-                    {%- if template.suffix %} template-suffix-{{ template.suffix }}{% endif -%}
-                    {%- if settings.swatch_enabled %} swatch-method-{{ settings.swatch_method }} swatch-style-{{ settings.swatch_style }}{% endif -%}
-                    " data-cc-animate-timeout="0">
+            {%- if template.suffix %} template-suffix-{{ template.suffix }}{% endif -%}
+            {%- if settings.swatch_enabled %} swatch-method-{{ settings.swatch_method }} swatch-style-{{ settings.swatch_style }}{% endif -%}
+            " data-cc-animate-timeout="0">
 
         {%- if settings.animations_enabled_desktop -%}
           <script>
@@ -117,7 +115,7 @@
         <a class="skip-link visually-hidden" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
 
         {% section 'announcement-bar' %}
-
+        {% section 'header' %}
         {% section 'store-messages' %}
 
         <main id="content" role="main">
